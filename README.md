@@ -1,16 +1,140 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**walid-soufyane/Walid-Soufyane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3500&pause=800&color=00D4AA&center=true&vCenter=true&width=720&lines=Walid+Soufyane;Quantitative+Finance+%7C+Stochastic+Modeling;MSc+Mathematical+%26+Computational+Finance;dS+%3D+%CE%BCS+dt+%2B+%CF%83S+dW" alt="Typing SVG" />
 
-Here are some ideas to get you started:
+**MSc Mathematical & Computational Finance @ Université de Montréal**
+<br/>
+*Turning probability theory into pricing, risk and alpha.*
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br/>
+
+<a href="mailto:soufyanewalid@gmail.com"><img src="https://img.shields.io/badge/Email-soufyanewalid%40gmail.com-00D4AA?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<img src="https://img.shields.io/badge/Based%20in-Montréal%2C%20QC-1f2937?style=for-the-badge&logo=googlemaps&logoColor=00D4AA" />
+<img src="https://img.shields.io/badge/Open%20to-Quant%20Internships%202027-1f2937?style=for-the-badge&logo=target&logoColor=00D4AA" />
+
+</div>
+
+---
+
+### `> whoami`
+
+```python
+class Walid:
+    def __init__(self):
+        self.location   = "Montréal, QC 🇨🇦"
+        self.education  = {
+            "MSc Mathematical & Computational Finance": "Université de Montréal (2026–2028)",
+            "BSc Mathematics & Economics":              "Université de Montréal (2023–2026)",
+        }
+        self.experience = "Private Wealth Advisory Intern @ Kerr Financial Group"
+        self.focus      = ["Derivatives pricing", "Stochastic calculus",
+                           "Statistical learning", "Portfolio & risk analytics"]
+        self.languages  = ["Français", "English", "العربية", "Español (learning)"]
+
+    def current_mood(self):
+        return "E[coffee] → ∞"
+```
+
+---
+
+### 📐 What I work on
+
+| Area | Topics |
+|:--|:--|
+| **Stochastic Modeling** | Brownian motion, Itô calculus, Black-Scholes-Merton, martingale pricing |
+| **Numerical Methods** | Monte Carlo simulation, variance reduction, binomial trees, finite differences |
+| **Statistical Learning** | Gaussian mixtures, regularized regression, classification, feature engineering |
+| **Econometrics** | Time series, volatility modeling, factor models |
+| **Wealth & Risk** | KYP analysis, equity research, AUM / fee-revenue analytics |
+
+---
+
+### 🧪 Featured work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🛡️ LLM Safety Mandate — Kaggle
+Predicting LLM refusals from 9 anonymized features.
+- 8-component **Gaussian Mixture Model** for latent structure
+- Engineered **XOR interaction** indicator feature
+- **Logistic regression** on top → macro-F1 **0.897** (public LB)
+
+`Python` `scikit-learn` `NumPy` `Pandas`
+
+</td>
+<td width="50%" valign="top">
+
+#### 📊 Datathon PolyFinance 2026
+Team project at the PolyFinance datathon.
+- Financial data analysis & modeling under time pressure
+- [→ Repository](https://github.com/AllanDarren/DatathonPolyFinance2026)
+
+`Python` `Data Science` `Finance`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚙️ Reporting Automation — Kerr Financial Group
+Proposal to automate quarterly investment reporting for a private wealth firm, presented to the COO.
+- Excel / VBA dashboards for **AUM & fee revenue**
+- AI-assisted workflows for admin & tax tasks
+
+`Excel` `VBA` `Python` `Automation`
+
+</td>
+<td width="50%" valign="top">
+
+#### 🎓 Current MSc coursework
+- **Advanced Probability** — measure theory, martingales, stochastic processes
+- **Fundamentals of Machine Learning** — supervised learning, model selection
+- **Global Economics** — macro & international finance
+
+`Université de Montréal` `2026–2028`
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🧰 Toolbox
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=cpp,c,python,r,git,vscode,latex&theme=dark" />
+
+<br/><br/>
+
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel%20%2B%20VBA-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)
+
+</div>
+
+---
+
+### 📈 GitHub stats
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Walid-Soufyane&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00D4AA&icon_color=00D4AA&text_color=c9d1d9" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Walid-Soufyane&layout=compact&hide_border=true&bg_color=0d1117&title_color=00D4AA&text_color=c9d1d9" />
+
+</div>
+
+---
+
+<div align="center">
+
+> *"All models are wrong, but some are useful."* — George Box
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:00D4AA&height=100&section=footer" width="100%" />
+
+</div>
