@@ -120,17 +120,6 @@ Proposal to automate quarterly investment reporting for a private wealth firm, p
 
 ---
 
-### 📈 GitHub stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Walid-Soufyane&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00D4AA&icon_color=00D4AA&text_color=c9d1d9" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Walid-Soufyane&layout=compact&hide_border=true&bg_color=0d1117&title_color=00D4AA&text_color=c9d1d9" />
-
-</div>
-
----
-
 <div align="center">
 
 > *"All models are wrong, but some are useful."* — George Box
