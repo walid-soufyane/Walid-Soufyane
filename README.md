@@ -120,6 +120,18 @@ Proposal to automate quarterly investment reporting for a private wealth firm, p
 
 ---
 
+### 🧮 Quant lab
+
+<div align="center">
+
+<img src="assets/quant-lab.svg" width="100%" alt="Monte Carlo simulation of geometric Brownian motion and a Markowitz efficient frontier" />
+
+<sub>Monte Carlo paths of <i>dS = μS dt + σS dW</i> and a Markowitz efficient frontier, generated in Python from simulated data · <a href="assets/make_quant_lab.py">source</a></sub>
+
+</div>
+
+---
+
 <div align="center">
 
 > *"All models are wrong, but some are useful."* — George Box
