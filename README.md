@@ -166,6 +166,12 @@ Proposal to automate quarterly investment reporting for a private wealth firm, p
 
 <sub>Monte Carlo paths of <i>dS = μS dt + σS dW</i> and a Markowitz efficient frontier, generated in Python from simulated data · <a href="assets/make_quant_lab.py">source</a></sub>
 
+<br/><br/>
+
+<img src="assets/yield-curve.svg" width="100%" alt="Animated Nelson-Siegel yield curve moving between normal, steep, flat, inverted and humped regimes" />
+
+<sub>Nelson-Siegel yield curve cycling through normal, steep, flat, inverted and humped regimes · <a href="assets/make_yield_curve.py">source</a></sub>
+
 </div>
 
 ---
