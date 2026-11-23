@@ -69,6 +69,30 @@ class Walid:
 <tr>
 <td width="50%" valign="top">
 
+#### 🎲 [Monte Carlo Option Pricer](https://github.com/walid-soufyane/monte-carlo-option-pricer)
+Option pricing by simulation under risk-neutral GBM, validated against Black-Scholes.
+- European calls/puts with **standard errors & 95% CIs**
+- **Variance reduction**: antithetic & control variates (≈ 2× lower std. error)
+- Roadmap: Asian & barrier options, Greeks, Sobol QMC, Heston
+
+`Python` `NumPy` `SciPy` `pytest`
+
+</td>
+<td width="50%" valign="top">
+
+#### 📉 [Yield Curve Lab](https://github.com/walid-soufyane/yield-curve-lab)
+Fixed-income toolkit: bond pricing, rate risk and curve construction.
+- Bond pricing & **YTM** (Brent root-finding)
+- **Duration, convexity, DV01**, tested against numerical derivatives
+- Roadmap: bootstrapping, interpolation, Nelson-Siegel, key-rate durations
+
+`Python` `NumPy` `SciPy` `pytest`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🛡️ LLM Safety Mandate — Kaggle
 Predicting LLM refusals from 9 anonymized features.
 - 8-component **Gaussian Mixture Model** for latent structure
