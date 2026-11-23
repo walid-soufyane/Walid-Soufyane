@@ -9,6 +9,7 @@
 <br/>
 
 <a href="mailto:soufyanewalid@gmail.com"><img src="https://img.shields.io/badge/Email-soufyanewalid%40gmail.com-00D4AA?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/walid-soufyane-019bb5370"><img src="https://img.shields.io/badge/LinkedIn-Walid%20Soufyane-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 <img src="https://img.shields.io/badge/Based%20in-Montréal%2C%20QC-1f2937?style=for-the-badge&logo=googlemaps&logoColor=00D4AA" />
 <img src="https://img.shields.io/badge/Open%20to-Quant%20Internships%202027-1f2937?style=for-the-badge&logo=target&logoColor=00D4AA" />
 
@@ -140,6 +141,19 @@ Proposal to automate quarterly investment reporting for a private wealth firm, p
 <img src="assets/quant-lab.svg" width="100%" alt="Monte Carlo simulation of geometric Brownian motion and a Markowitz efficient frontier" />
 
 <sub>Monte Carlo paths of <i>dS = μS dt + σS dW</i> and a Markowitz efficient frontier, generated in Python from simulated data · <a href="assets/make_quant_lab.py">source</a></sub>
+
+</div>
+
+---
+
+### 🤝 Let's connect
+
+<div align="center">
+
+Open to **quant internships for 2027** and always happy to talk derivatives, stochastic models or markets.
+
+<a href="https://www.linkedin.com/in/walid-soufyane-019bb5370"><img src="https://img.shields.io/badge/Connect%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:soufyanewalid@gmail.com"><img src="https://img.shields.io/badge/Say%20hi-Email-00D4AA?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 </div>
 
