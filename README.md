@@ -63,6 +63,55 @@ class Walid:
 
 ---
 
+### ∑ Core equations
+
+<details open>
+<summary><b>Risk-neutral pricing</b>: price = discounted expected payoff under ℚ</summary>
+
+```math
+V_0 = e^{-rT}\,\mathbb{E}^{\mathbb{Q}}\!\left[\,\text{payoff}(S_T)\,\right],
+\qquad dS_t = r S_t\,dt + \sigma S_t\,dW_t^{\mathbb{Q}}
+```
+</details>
+
+<details>
+<summary><b>Black-Scholes call</b></summary>
+
+```math
+C = S_0 N(d_1) - K e^{-rT} N(d_2),
+\qquad d_{1,2} = \frac{\ln(S_0/K) + (r \pm \tfrac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}
+```
+</details>
+
+<details>
+<summary><b>Monte Carlo error</b>: shrinks like 1/√N, so variance reduction is worth it</summary>
+
+```math
+\hat V_N = \frac{1}{N}\sum_{i=1}^{N} e^{-rT}\,\text{payoff}\big(S_T^{(i)}\big),
+\qquad \text{SE}(\hat V_N) = \frac{\hat\sigma}{\sqrt{N}}
+```
+</details>
+
+<details>
+<summary><b>Bond risk</b>: duration–convexity approximation</summary>
+
+```math
+\frac{\Delta P}{P} \approx -D_{\text{mod}}\,\Delta y + \tfrac{1}{2}\,C\,(\Delta y)^2,
+\qquad \text{DV01} = D_{\text{mod}} \cdot P \cdot 10^{-4}
+```
+</details>
+
+<details>
+<summary><b>Markowitz</b>: minimum variance for a target return</summary>
+
+```math
+\min_{w}\; w^\top \Sigma\, w
+\quad \text{s.t.} \quad w^\top \mu = \mu^*,\;\; w^\top \mathbf{1} = 1
+```
+</details>
+
+---
+
 ### 🧪 Featured work
 
 <table>
