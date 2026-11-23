@@ -38,6 +38,16 @@ class Walid:
 
 ---
 
+### ⚡ Currently
+
+- 🔭 Building **[Monte Carlo Option Pricer](https://github.com/walid-soufyane/monte-carlo-option-pricer)**: next up, Asian & barrier options and pathwise Greeks
+- 📉 Building **[Yield Curve Lab](https://github.com/walid-soufyane/yield-curve-lab)**: next up, bootstrapping a zero curve and Nelson-Siegel fitting
+- 📚 Studying measure-theoretic probability and martingales (MSc, Université de Montréal)
+- 💼 Private Wealth Advisory Intern at Kerr Financial Group
+- 🎯 Looking for **quant / strats internships for 2027**
+
+---
+
 ### 💼 Experience
 
 **Private Wealth Advisory Intern** · Kerr Financial Group · *June 2026 – present*
