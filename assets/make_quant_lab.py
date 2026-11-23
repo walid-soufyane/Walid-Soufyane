@@ -51,16 +51,29 @@ def gbm_panel(rng) -> list[str]:
     for i, path in enumerate(paths):
         ys = [scale(v, lo, hi, TOP + PH, TOP) for v in np.clip(path, lo, hi)]
         out.append(
-            f'<polyline class="p" style="animation-delay:{(i % 16) * 0.12:.2f}s" pathLength="1" '
+            f'<polyline class="p" style="animation-delay:{i * 0.04:.2f}s" pathLength="1" '
             f'points="{polyline(xs[::3], ys[::3])}" fill="none" stroke="{ACCENT}" stroke-opacity="0.28" stroke-width="1"/>'
         )
     ys = [scale(v, lo, hi, TOP + PH, TOP) for v in p50]
     out.append(
-        f'<polyline class="p" style="animation-delay:2s" pathLength="1" points="{polyline(xs[::3], ys[::3])}" '
+        f'<polyline class="p" style="animation-delay:2.8s" pathLength="1" points="{polyline(xs[::3], ys[::3])}" '
         f'fill="none" stroke="#ffffff" stroke-width="2"/>'
     )
+    # histogram of S_T, drawn as horizontal bars growing from the right edge of the plot
+    counts, edges = np.histogram(np.clip(paths[:, -1], lo, hi), bins=14, range=(lo, hi))
+    for j, c in enumerate(counts):
+        if c == 0:
+            continue
+        y_top = scale(edges[j + 1], lo, hi, TOP + PH, TOP)
+        y_bot = scale(edges[j], lo, hi, TOP + PH, TOP)
+        width = c / counts.max() * 70
+        out.append(
+            f'<rect class="h" style="animation-delay:{j * 0.05:.2f}s" x="{LX + PW - width:.1f}" y="{y_top + 1:.1f}" '
+            f'width="{width:.1f}" height="{y_bot - y_top - 2:.1f}" fill="{ACCENT}" fill-opacity="0.35"/>'
+        )
     out.append("</g>")
     out += [
+        f'<text x="{LX + PW - 6}" y="{TOP + 14}" text-anchor="end" font-size="10" fill="{ACCENT}">distribution of S_T</text>',
         f'<text x="{LX}" y="{TOP - 30}" font-size="14" font-weight="700" fill="{TEXT}">Monte Carlo · Geometric Brownian Motion</text>',
         f'<text x="{LX}" y="{TOP - 13}" font-size="11" fill="{MUTED}">dS = μS dt + σS dW   μ=7%  σ=20%  64 paths · 252 steps</text>',
         f'<text x="{LX + PW / 2}" y="{TOP + PH + 22}" text-anchor="middle" font-size="10" fill="{MUTED}">trading days →</text>',
@@ -98,10 +111,10 @@ def frontier_panel(rng) -> list[str]:
         out.append(f'<text x="{RX - 8}" y="{py(m) + 4:.1f}" text-anchor="end" font-size="10" fill="{MUTED}">{m:.0%}</text>')
     out.append('<g clip-path="url(#clipR)">')
     s_lo, s_hi = sharpe.min(), sharpe.max()
-    for r, m, s in zip(risk, ret, sharpe):
+    for i, (r, m, s) in enumerate(zip(risk, ret, sharpe)):
         t = (s - s_lo) / (s_hi - s_lo)
         out.append(
-            f'<circle cx="{px(r):.1f}" cy="{py(m):.1f}" r="2.2" fill="{ACCENT}" fill-opacity="{0.12 + 0.75 * t:.2f}"/>'
+            f'<circle class="d" style="animation-delay:{i * 0.0025:.3f}s" cx="{px(r):.1f}" cy="{py(m):.1f}" r="2.2" fill="{ACCENT}" fill-opacity="{0.12 + 0.75 * t:.2f}"/>'
         )
     # upper envelope of the cloud approximates the efficient frontier
     order = np.argsort(risk)
@@ -111,7 +124,7 @@ def frontier_panel(rng) -> list[str]:
             best = ret[i]
             pts.append((px(risk[i]), py(ret[i])))
     out.append(
-        f'<polyline class="p" style="animation-delay:0.6s" pathLength="1" points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" '
+        f'<polyline class="p" style="animation-delay:2.6s" pathLength="1" points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" '
         f'fill="none" stroke="#ffffff" stroke-width="2"/>'
     )
     k = int(np.argmax(sharpe))
@@ -120,7 +133,7 @@ def frontier_panel(rng) -> list[str]:
         f'<line x1="{px(0.04):.1f}" y1="{py(rf + sharpe[k] * 0.04):.1f}" x2="{px(0.26):.1f}" y2="{py(rf + sharpe[k] * 0.26):.1f}" '
         f'stroke="{ACCENT}" stroke-dasharray="4 4" stroke-opacity="0.7"/>',
         "</g>",
-        f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="6" fill="none" stroke="#ffffff" stroke-width="2"/>',
+        f'<circle class="ring" cx="{cx:.1f}" cy="{cy:.1f}" r="6" fill="none" stroke="#ffffff" stroke-width="2"/>',
         f'<text x="{cx + 10:.1f}" y="{cy + 16:.1f}" font-size="10" fill="#ffffff">max Sharpe {sharpe[k]:.2f}</text>',
         f'<text x="{RX}" y="{TOP - 30}" font-size="14" font-weight="700" fill="{TEXT}">Markowitz · Efficient Frontier</text>',
         f'<text x="{RX}" y="{TOP - 13}" font-size="11" fill="{MUTED}">900 random portfolios · 4 assets · colour = Sharpe</text>',
@@ -138,9 +151,17 @@ def main() -> None:
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
         f'font-family="{FONT}" role="img" aria-label="Monte Carlo GBM paths and a Markowitz efficient frontier (simulated data)">',
-        "<style>.p{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s ease-out forwards}"
-        "@keyframes draw{to{stroke-dashoffset:0}}"
-        "@media (prefers-reduced-motion: reduce){.p{animation:none;stroke-dashoffset:0}}</style>",
+        "<style>"
+        ".p{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 10s ease-out infinite both}"
+        "@keyframes draw{0%{stroke-dashoffset:1;opacity:1}30%{stroke-dashoffset:0}80%{opacity:1}92%,100%{stroke-dashoffset:0;opacity:0}}"
+        ".h{transform-box:fill-box;transform-origin:right;animation:grow 10s ease-out infinite both}"
+        "@keyframes grow{0%,32%{transform:scaleX(0);opacity:1}48%{transform:scaleX(1)}80%{opacity:1}92%,100%{transform:scaleX(1);opacity:0}}"
+        ".d{animation:pop 10s ease-out infinite both}"
+        "@keyframes pop{0%{opacity:0}4%,80%{opacity:1}92%,100%{opacity:0}}"
+        ".ring{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite}"
+        "@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.6);opacity:.4}}"
+        "@media (prefers-reduced-motion: reduce){.p,.h,.d,.ring{animation:none;stroke-dashoffset:0}}"
+        "</style>",
         f'<defs><clipPath id="clipL"><rect x="{LX}" y="{TOP}" width="{PW}" height="{PH}"/></clipPath>'
         f'<clipPath id="clipR"><rect x="{RX}" y="{TOP}" width="{PW}" height="{PH}"/></clipPath></defs>',
         f'<rect width="{W}" height="{H}" rx="14" fill="{BG}"/>',
