@@ -208,6 +208,9 @@ Proposal to automate quarterly investment reporting for a private wealth firm, p
 
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel%20%2B%20VBA-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
@@ -251,6 +254,8 @@ Open to **quant internships for 2027** and always happy to talk derivatives, sto
 <div align="center">
 
 > *"All models are wrong, but some are useful."* — George Box
+
+<img src="https://komarev.com/ghpvc/?username=walid-soufyane&label=Profile%20views&color=00D4AA&style=flat-square" alt="profile views" />
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:00D4AA&height=100&section=footer" width="100%" />
 
