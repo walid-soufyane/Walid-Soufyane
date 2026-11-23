@@ -37,6 +37,19 @@ class Walid:
 
 ---
 
+### 💼 Experience
+
+**Private Wealth Advisory Intern** · Kerr Financial Group · *June 2026 – present*
+
+- **KYP** (Know Your Product) analysis and **equity research**
+- **Excel dashboards** tracking assets under management (AUM) and fee revenue
+- **AI-assisted workflow automation** for administrative and tax tasks
+- Proposed automating **quarterly investment reporting**, presented to the COO
+
+`Private Wealth Management` `Equity Research` `Excel / VBA` `Automation`
+
+---
+
 ### 📐 What I work on
 
 | Area | Topics |
