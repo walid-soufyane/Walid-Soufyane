@@ -253,7 +253,7 @@ Open to **quant internships for 2027** and always happy to talk derivatives, sto
 
 <div align="center">
 
-> *"All models are wrong, but some are useful."* — George Box
+> *Future P&L maker*
 
 <img src="https://komarev.com/ghpvc/?username=walid-soufyane&label=Profile%20views&color=00D4AA&style=flat-square" alt="profile views" />
 
